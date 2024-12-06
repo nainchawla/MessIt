@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v3';
+const CACHE_NAME = 'v2';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -12,7 +12,7 @@ const urlsToCache = [
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-      caches.open('v3').then((cache) => {
+      caches.open('v1').then((cache) => {
         return cache.addAll([
           '/',
           '/index.html',
@@ -35,7 +35,7 @@ self.addEventListener('fetch', (event) => {
         fetch(event.request)
           .then((networkResponse) => {
             // Update the cache with the latest menu
-            caches.open('v3').then((cache) => {
+            caches.open('v1').then((cache) => {
               cache.put(event.request, networkResponse.clone());
             });
             return networkResponse;
