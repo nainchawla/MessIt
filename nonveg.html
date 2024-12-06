@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Veg Mess</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <button class="menu-btn" onclick="reset()">Reset</button>
+      <h1>LH -Non-Veg Mess</h1>
+    </div>
+    <div class="date-selector">
+      <button class="prev">&lt;</button>
+      <p>November 2024</p>
+      <button class="next">&gt;</button>
+    </div>
+  </header>
+  
+
+  <main>
+    <section class="calendar">
+      <div class="day" data-day="Sunday">Sun<br>24</div>
+      <div class="day" data-day="Monday">Mon<br>25</div>
+      <div class="day" data-day="Tuesday">Tue<br>26</div>
+      <div class="day" data-day="Wednesday">Wed<br>27</div>
+      <div class="day" data-day="Thursday">Thu<br>28</div>
+      <div class="day" data-day="Friday">Fri<br>29</div>
+      <div class="day" data-day="Saturday">Sat<br>30</div>
+    </section>
+    <h2>Mess Menu</h2>
+    <div id="menu-container">
+      <!-- Dynamic menu content will be rendered here -->
+    </div>
+  </main>
+
+  <script src="nonveg.js"></script>
+</body>
+</html>
