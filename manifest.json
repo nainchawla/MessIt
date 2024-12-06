@@ -1,7 +1,7 @@
 {
     "name": "Mess Menu",
     "short_name": "Messit",
-    "start_url": "start_url": "/MessIt/",
+    "start_url": "/MessIt/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#3b82f6",
