@@ -50,21 +50,29 @@ if ('serviceWorker' in navigator) {
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the default mini-infobar from appearing
     e.preventDefault();
+    // Save the event for triggering later
     deferredPrompt = e;
-    // Show your custom install button
+
+    // Show the install button
     const installBtn = document.getElementById('install-button');
     installBtn.style.display = 'block';
 
+    // Add click listener to the button
     installBtn.addEventListener('click', () => {
+        // Show the install prompt
         deferredPrompt.prompt();
+        // Wait for the user's response
         deferredPrompt.userChoice.then((choiceResult) => {
             if (choiceResult.outcome === 'accepted') {
                 console.log('User accepted the install prompt');
             } else {
                 console.log('User dismissed the install prompt');
             }
+            // Reset the deferredPrompt
             deferredPrompt = null;
         });
     });
 });
+
